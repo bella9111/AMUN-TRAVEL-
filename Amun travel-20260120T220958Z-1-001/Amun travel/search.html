@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMUN Travel - Hotel Search</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-theme">
+        <div id="authModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Login</button>
+                    <button class="auth-tab" data-tab="register">Register</button>
+                </div>
+                
+                <form id="loginForm" class="auth-form active">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                        <!-- <div class="error-message"></div> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                        <!-- <div class="error-message"></div> -->
+                    </div>
+                    <button type="submit" class="auth-button">Login</button>
+                </form>
+    
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="registerName">Full Name</label>
+                        <input type="text" id="registerName" required>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" required>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" required>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">Confirm Password</label>
+                        <input type="password" id="registerConfirmPassword" required>
+                        <div class="error-message"></div>
+                    </div>
+                    <button type="submit" class="auth-button">Register</button>
+                </form>
+            </div>
+        </div>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>AMUN Travel</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="AI.html">AI Itinerary</a>
+                <a href="profile.html">Profile</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button id="loginBtn" class="auth-btn">Login</button>
+                <button id="signupBtn" class="auth-btn">Sign Up</button>
+            </div>
+            <div class="theme-selector">
+                <button class="theme-btn" data-theme="light">Light</button>
+                <button class="theme-btn" data-theme="dark">Dark</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <div class="search-filters">
+                <form id="searchForm">
+                        <div class="filter-group">
+                            <label for="searchType">Search Type</label>
+                            <select id="searchType">
+                                <option value="hotels">Hotels</option>
+                                <option value="resorts">Resorts</option>
+                                <option value="all">All</option>
+                            </select>
+                        </div>
+    
+                    <div class="filter-group">
+                        <label for="location">Location</label>
+                        <select id="location">
+                            <option value="all">All Locations</option>
+                            
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="priceRange">Price Range</label>
+                        <select id="priceRange">
+                            <option value="all">All Prices</option>
+                            <option value="budget">Budget (Under $100)</option>
+                            <option value="medium">Medium ($100-$200)</option>
+                            <option value="luxury">Luxury ($200+)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="rating">Minimum Rating</label>
+                        <select id="rating">
+                            <option value="0">Any Rating</option>
+                            <option value="3">3+ Stars</option>
+                            <option value="4">4+ Stars</option>
+                            <option value="4.5">4.5+ Stars</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="amenities">Amenities</label>
+                        <select id="amenities" multiple>
+                            <option value="Pool">Pool</option>
+                            <option value="Spa">Spa</option>
+                            <option value="Restaurant">Restaurant</option>
+                            <option value="WiFi">WiFi</option>
+                            <option value="Gym">Gym</option>
+                            <option value="Parking">Parking</option>
+                            <option value="Beach Access">Beach Access</option>
+                            <option value="Air Conditioning">Air Conditioning</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sortBy">Sort By</label>
+                        <select id="sortBy">
+                            <option value="recommended">Recommended</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="rating">Rating</option>
+                            <option value="name">Name</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="search-button">Search</button>
+                </form>
+            </div>
+
+            <div class="search-results">
+                <div class="view-toggle">
+                    <button id="gridView" class="view-btn active">
+                        <i class="fas fa-th-large"></i> Grid
+                    </button>
+                    <button id="listView" class="view-btn">
+                        <i class="fas fa-list"></i> List
+                    </button>
+                </div>
+                <div id="resultsCount" class="results-count">0 hotels found</div>
+                <div id="resultsContainer" class="results-container grid-view"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About AMUN</h3>
+                <p>Your AI-powered travel companion for exploring Egypt</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="search.html">Search</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@amuntravel.com</p>
+                <p>Phone: +20 123 456 7890</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/search.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

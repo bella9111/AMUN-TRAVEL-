@@ -1,0 +1,323 @@
+
+.contact-header {
+  position: relative;
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+  url('https://i.pinimg.com/736x/c7/b3/27/c7b327bce55ce8006fc93a6fc00d1a36.jpg') center/cover fixed;
+  color: white;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.contact-header-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-header h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1.5rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+.contact-header p {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: 0 auto 6rem;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.info-card {
+  background-color: var(--background-color);
+  padding: 2.5rem 2rem;
+  border-radius: 1.25rem;
+  text-align: center;
+  box-shadow: 0 6px 12px var(--shadow-color);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px var(--shadow-hover-color);
+}
+
+.info-card i {
+  font-size: 2.75rem;
+  color: gold;
+  margin-bottom: 1.75rem;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover i {
+  transform: scale(1.1);
+}
+
+.info-card h3 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.info-card p, 
+.info-card a {
+  color: var(--text-light);
+  line-height: 1.7;
+  transition: color 0.3s ease;
+}
+
+.info-card a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.contact-form-container {
+  background-color: var(--background-color);
+  padding: 3rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 12px var(--shadow-color);
+  border: 1px solid var(--border-color);
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--border-color);
+  border-radius: 0.75rem;
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+  font-size: 1.05rem;
+}
+
+.form-group textarea {
+  min-height: 180px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  background-color: var(--input-focus-bg);
+}
+
+input[type="checkbox"] {
+  all: unset;
+  appearance: checkbox;
+  width: 16px;
+  height: 16px;
+  accent-color: #2196f3; 
+  border: 2px solid black;
+  cursor: pointer;
+  margin-top: 0.2rem;
+}
+.submit-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.95rem;
+  margin-top: 0.75rem;
+  display: block;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.error-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #1a1a1a;
+  --text-light: #555;
+  --primary-color: #007BFF;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --border-color: #ddd;
+}
+
+.faq-section {
+  padding: 5rem 2rem;
+  background-color: var(--background-color);
+  max-width: 1200px;
+  margin: 4rem auto 6rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 12px var(--shadow-color);
+  font-family: "Segoe UI", sans-serif;
+  color: var(--text-color);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.faq-container {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: gold;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.faq-question {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--hover-color);
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.faq-question:hover {
+  background-color: gold;
+}
+
+.faq-question .icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question .icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 1.75rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  padding: 0 1.75rem 1.5rem;
+  max-height: 500px;
+}
+
+.faq-answer-content {
+  padding-top: 1rem;
+  color: var(--text-light);
+  line-height: 1.75;
+}
+
+.faq-footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.btn-secondary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+      grid-template-columns: 1fr;
+  }
+}

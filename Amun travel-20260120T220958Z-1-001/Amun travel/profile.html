@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - AMUN Travel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>AMUN Travel</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="search.html">Search</a>
+                <a href="AI.html">AI Itinerary</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button id="logoutBtn" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+            <div class="theme-selector">
+                <button class="theme-btn" data-theme="light">Light</button>
+                <button class="theme-btn" data-theme="dark">Dark</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-header">
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <img src="images/default-avatar.jpg" alt="Profile Picture">
+                    <button class="edit-avatar">
+                        <i class="fas fa-camera"></i> Change Photo
+                    </button>
+                </div>
+                <div class="profile-details">
+                    <h2>John Doe</h2>
+                    <p class="email">
+                        <i class="fas fa-envelope"></i> john.doe@example.com
+                    </p>
+                    <p class="member-since">
+                        <i class="fas fa-calendar-alt"></i> Member since: January 2024
+                    </p>
+                    <div class="profile-badges">
+                        <span class="badge gold">Gold Member</span>
+                        <span class="badge verified">Verified</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-stats">
+                <div class="stat" data-stat="bookings">
+                    <span class="number">5</span>
+                    <span class="label">Bookings</span>
+                    <i class="fas fa-calendar-check stat-icon"></i>
+                </div>
+                <div class="stat" data-stat="itineraries">
+                    <span class="number">3</span>
+                    <span class="label">Saved Itineraries</span>
+                    <i class="fas fa-map-marked-alt stat-icon"></i>
+                </div>
+                <div class="stat" data-stat="reviews">
+                    <span class="number">2</span>
+                    <span class="label">Reviews</span>
+                    <i class="fas fa-star stat-icon"></i>
+                </div>
+                <div class="stat" data-stat="points">
+                    <span class="number">1,250</span>
+                    <span class="label">Loyalty Points</span>
+                    <i class="fas fa-coins stat-icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-content">
+            <div class="tabs">
+                <button class="tab active" data-tab="bookings" aria-controls="bookings" aria-selected="true">
+                    <i class="fas fa-calendar-alt"></i> My Bookings
+                </button>
+                <button class="tab" data-tab="itineraries" aria-controls="itineraries" aria-selected="false">
+                    <i class="fas fa-map-marked-alt"></i> Saved Itineraries
+                </button>
+                <button class="tab" data-tab="reviews" aria-controls="reviews" aria-selected="false">
+                    <i class="fas fa-star"></i> My Reviews
+                </button>
+                <button class="tab" data-tab="settings" aria-controls="settings" aria-selected="false">
+                    <i class="fas fa-cog"></i> Settings
+                </button>
+            </div>
+
+            <div class="tab-content">
+                <div id="bookings" class="tab-pane active" role="tabpanel" aria-labelledby="bookings-tab">
+                    <div class="booking-card" data-booking-id="12345">
+                        <div class="booking-header">
+                            <h3>Nile View Hotel - Premium Suite</h3>
+                            <span class="status confirmed">
+                                <i class="fas fa-check-circle"></i> Confirmed
+                            </span>
+                        </div>
+                        <div class="booking-details">
+                            <p>
+                                <i class="fas fa-calendar-day"></i>
+                                <strong>Dates:</strong> March 15 - 20, 2024 (5 nights)
+                            </p>
+                            <p>
+                                <i class="fas fa-users"></i>
+                                <strong>Guests:</strong> 2 Adults
+                            </p>
+                            <p>
+                                <i class="fas fa-bed"></i>
+                                <strong>Room:</strong> Premium Nile View Suite
+                            </p>
+                            <p>
+                                <i class="fas fa-dollar-sign"></i>
+                                <strong>Total:</strong> $750 (including taxes)
+                            </p>
+                        </div>
+                        <div class="booking-actions">
+                            <button class="action-button view">
+                                <i class="fas fa-eye"></i> View Details
+                            </button>
+                            <button class="action-button cancel">
+                                <i class="fas fa-times"></i> Cancel Booking
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="itineraries" class="tab-pane" role="tabpanel" aria-labelledby="itineraries-tab">
+                    <div class="itinerary-card" data-itinerary-id="789">
+                        <div class="itinerary-header">
+                            <h3>Cairo Adventure</h3>
+                            <span class="duration">5 Days</span>
+                        </div>
+                        <div class="itinerary-details">
+                            <p>Explore the wonders of ancient Egypt</p>
+                        </div>
+                        <div class="itinerary-actions">
+                            <button class="action-button edit">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                            <button class="action-button delete">
+                                <i class="fas fa-trash"></i> Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="reviews" class="tab-pane" role="tabpanel" aria-labelledby="reviews-tab">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <h3>Luxor Temple Visit</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">Amazing experience! The temple is breathtaking.</p>
+                    </div>
+                </div>
+
+                <div id="settings" class="tab-pane" role="tabpanel" aria-labelledby="settings-tab">
+                    <form class="settings-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" value="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" value="john.doe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" value="+20123456789">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">New Password</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password" name="confirm-password">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="notifications" name="notifications" checked>
+                                Receive Notifications
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                Subscribe to Newsletter
+                            </label>
+                        </div>
+                        <button type="submit" class="save-button">
+                            <i class="fas fa-save"></i> Save Changes
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/profile.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<head>
+    <title>Contact Us - AMUN Travel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="light-theme">
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>AMUN Travel</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="search.html">Search</a>
+                <a href="AI.html">AI Itinerary</a>
+                <a href="profile.html">Profile</a>
+            </div>
+            <div class="theme-selector">
+                <button class="theme-btn" data-theme="light">Light</button>
+                <button class="theme-btn" data-theme="dark">Dark</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-header">
+            <div class="contact-header-content">
+                <h2>Contact Us</h2>
+                <p>Have questions? We're here to help! Our team is available 24/7 to assist with your travel needs.</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Our Location</h3>
+                    <p>FCAI Helwan University <br> Cairo, Egypt</p>
+                    <a href="https://maps.app.goo.gl/8VhDpz7rHDw3Ut1AA" class="card-link">View on Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone Support</h3>
+                    <p>+20 114 863 6863<br>+20 109 312 6979</p>
+                    <p class="hours">24/7 Availability</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>info@amuntravel.com<br>support@amuntravel.com</p>
+                    <p class="response-time">Response within 24 hours</p>
+                </div>
+            </div>
+
+            <div class="contact-form-container" id="contact-form">
+                <h2 class="form-title">Send Us a Message</h2>
+                <form id="contactForm" novalidate>
+
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        <div class="error-message" id="name-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="Your@email.com">
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Address"> Address <span class="required">*</span></label>
+                        <input type="address" id="address" name="Address" required placeholder="FCAI Helwan University, Cairo, Egypt">
+                        <div class="error-message" id="address"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+20 123 456 7890">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" required minlength="10" maxlength="500" placeholder="Type your message here..."></textarea>
+                        <div class="char-counter"><span id="char-count">0</span>/500 characters</div>
+                        <div class="error-message" id="message-error"></div>
+                    </div>
+                    
+                    
+                    <div class="form-group checkbox-group">
+                        <label for="consent" class="checkbox-label">
+                          <input type="checkbox" id="consent" name="consent" required>
+                          <span class="custom-checkbox"></span>
+                          I agree to the 
+                          <a href="https://www.freeprivacypolicy.com/live/248ab37f-9776-4f31-a675-7c546877240f" target="_blank">Privacy Policy</a> <span class="required">*</span>
+                        </label>
+                        <div class="error-message" id="consent-error"></div>
+                      </div>
+                      
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                
+                <div id="form-message" class="form-message"></div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find quick answers to common questions about our services</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+                        <span>How do I change or cancel my booking?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq1" aria-hidden="true">
+                        <p>You can modify or cancel your booking through your account dashboard. For bookings made within the last 24 hours or for complex changes, please contact our support team. Please note that cancellation policies vary depending on the service provider.</p>
+                        <ul>
+                            <li>Hotels: Free cancellation up to 48 hours before check-in</li>
+                            <li>Tours: Free cancellation up to 7 days before the tour date</li>
+                            <li>Transportation: Changes may incur fees based on provider policies</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+                        <span>How does the AI itinerary generator work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq2" aria-hidden="true">
+                        <p>Our AI itinerary generator uses machine learning to create personalized travel plans based on:</p>
+                        <ol>
+                            <li>Your travel preferences (from our questionnaire)</li>
+                            <li>Budget constraints</li>
+                            <li>Duration of stay</li>
+                            <li>Seasonal factors and local events</li>
+                            <li>User reviews and ratings</li>
+                        </ol>
+                        <p>The system optimizes for travel time between locations and balances popular attractions with hidden gems.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq3" aria-hidden="true">
+                        <p>We accept all major payment methods for your convenience:</p>
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <i class="fab fa-cc-visa"></i>
+                                <span>Visa</span>
+                            </div>
+                            <div class="payment-method">
+                                <i class="fab fa-cc-mastercard"></i>
+                                <span>Mastercard</span>
+                            </div>
+                            <div class="payment-method">
+                                <i class="fab fa-cc-paypal"></i>
+                                <span>PayPal</span>
+                            </div>
+                            <div class="payment-method">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Cash on Arrival (selected services)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+                        <span>Is my personal information secure?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq4" aria-hidden="true">
+                        <p>We take your privacy and security very seriously. Our platform uses:</p>
+                        <ul>
+                            <li>256-bit SSL encryption for all data transfers</li>
+                            <li>PCI DSS compliant payment processing</li>
+                            <li>Regular security audits</li>
+                            <li>Strict data protection policies in compliance with GDPR</li>
+                        </ul>
+                        <p>We never share your personal information with third parties without your explicit consent, except as required to fulfill your bookings.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+                        <span>Do you offer services for travelers with special needs?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" id="faq5" aria-hidden="true">
+                        <p>Yes, we're committed to accessible travel. Our platform allows you to filter for:</p>
+                        <ul>
+                            <li>Wheelchair-accessible accommodations</li>
+                            <li>Hotels with visual/hearing impairment facilities</li>
+                            <li>Tours with special needs accommodations</li>
+                            <li>Transportation options for mobility devices</li>
+                        </ul>
+                        <p>Please contact our accessibility team for personalized assistance in planning your trip.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-footer">
+                <p>Didn't find what you're looking for?</p>
+                <a href="#contact-form" class="btn-secondary">Ask Your Question</a>
+            </div>
+        </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h3>AMUN Travel</h3>
+                    <p>Your AI-powered travel companion</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="search.html">Search Destinations</a></li>
+                    <li><a href="Ai.html">AI assistance</a></li>
+                    <li><a href="profile.html">Profile Page</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html">FAQs</a></li>
+                    <li><a href="https://www.freeprivacypolicy.com/live/248ab37f-9776-4f31-a675-7c546877240f">Privacy Policy</a></li>
+                    <li><a href="https://www.freeprivacypolicy.com/live/248ab37f-9776-4f31-a675-7c546877240f">Terms of Service</a></li>
+                    <li><a href="https://www.freeprivacypolicy.com/live/248ab37f-9776-4f31-a675-7c546877240f">Cancellation Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> FCAI Helwan, Cairo, Egypt</li>
+                    <li><i class="fas fa-phone"></i> +20 114 1863 6863</li>
+                    <li><i class="fas fa-envelope"></i> info@amuntravel.com</li>
+                    <li><i class="fas fa-clock"></i> 24/7 Support</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
