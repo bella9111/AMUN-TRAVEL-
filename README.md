@@ -35,9 +35,9 @@ HTML | CSS | JavaScript | Ocean AI integration
 ## 📱 Demo
 Add screenshots or GIFs of your website here:
 
-<img src="path_to_screenshot1.png" width="45%" />  
-<img src="path_to_screenshot2.png" width="45%" />
-
+<img src="Amun travel-20260120T220958Z-1-001/Amun travel/profile.png" width="45%" />  
+<img src="Amun travel-20260120T220958Z-1-001/Amun travel/search.png" width="45%" />
+<img src="Amun travel-20260120T220958Z-1-001/Amun travel/contact.png" width="45%" />
 ---
 
 ## 🛠️ Technologies Used
